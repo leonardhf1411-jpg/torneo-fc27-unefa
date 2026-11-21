@@ -1145,11 +1145,13 @@
     });
 
     function handleFormSubmit(e) {
+      e.preventDefault();
       const btn = document.getElementById('submitBtn');
+      if (btn.disabled) return;
       btn.disabled = true;
       btn.innerHTML = '<span>⚡ REGISTRANDO FICHAJE EN GOOGLE SHEETS...</span>';
 
-      // Also send via fetch no-cors to guarantee delivery in all contexts
+      // Send single submission via fetch no-cors
       const form = document.getElementById('fc27Form');
       const formData = new FormData(form);
       const params = new URLSearchParams();
