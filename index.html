@@ -906,7 +906,7 @@
     <!-- RIGHT: Player Registration Form -->
     <section class="creator-panel">
       <div class="panel-header">
-        <h2>INSCRIPCIONES <span>CERRADAS</span></h2>
+        <h2>FICHA DE <span>INSCRIPCIÓN OFICIAL</span></h2>
         <div class="progress-box">
           <div class="progress-text" id="progressLabel">PROGRESO DE CARTA: 0%</div>
           <div class="progress-track">
@@ -915,10 +915,6 @@
         </div>
       </div>
 
-            <div style="margin-bottom:20px;padding:18px 20px;background:rgba(255,45,85,0.14);border:2px solid #ff2d55;border-left:6px solid #00f13f;border-radius:12px;text-align:center;box-shadow:0 0 25px rgba(255,45,85,0.25);">
-        <div style="font-family:'Teko',sans-serif;font-size:2.3rem;line-height:1;font-style:italic;color:#ffffff;letter-spacing:1.5px;text-shadow:0 0 14px rgba(255,45,85,0.8);">🔒 ¡INSCRIPCIONES CERRADAS — CUPOS AGOTADOS!</div>
-        <div style="font-size:0.88rem;color:#d6e6ff;margin-top:6px;">La lista oficial de <strong>26 participantes</strong> ya está completa. ¡Nos vemos este <strong>miércoles a las 8:45 a.m.</strong> para el sorteo!</div>
-      </div>
       <!-- Visual Card Customizers -->
       <div class="customizer-row">
         <div class="cust-group">
@@ -1020,8 +1016,8 @@
 
         </div>
 
-        <button type="submit" class="submit-btn" id="submitBtn" disabled style="background:linear-gradient(90deg,#1e293b,#334155);color:#94a3b8;box-shadow:none;cursor:not-allowed;opacity:0.85;">
-          <span>🔒 INSCRIPCIONES CERRADAS (CUPOS COMPLETOS)</span>
+        <button type="submit" class="submit-btn" id="submitBtn">
+          <span>⚡ FICHAR JUGADOR E INSCRIBIRSE AL TORNEO</span>
         </button>
 
         <p class="sync-note">
@@ -1148,7 +1144,7 @@
       card.style.transform = 'rotateX(0deg) rotateY(0deg) scale(1)';
     });
 
-    function handleFormSubmit(e) { e.preventDefault(); return false;
+    function handleFormSubmit(e) {
       e.preventDefault();
       const btn = document.getElementById('submitBtn');
       if (btn.disabled) return;
@@ -1182,7 +1178,7 @@
 
         document.getElementById('walkoutModal').classList.add('active');
         btn.disabled = false;
-        btn.innerHTML = '<span>🔒 INSCRIPCIONES CERRADAS (CUPOS COMPLETOS)</span>';
+        btn.innerHTML = '<span>⚡ FICHAR JUGADOR E INSCRIBIRSE AL TORNEO</span>';
       }, 900);
     }
 
